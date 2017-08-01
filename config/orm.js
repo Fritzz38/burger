@@ -2,6 +2,7 @@
 var connection = require("../config/connection.js");
 
 // Object Relational Mapper (ORM)
+
 // Helper function for SQL syntax.
 function printQuestionMarks(num) {
   var arr = [];
@@ -60,7 +61,7 @@ var orm = {
 	    queryString += condition;
 
 	    console.log(queryString);
-	    
+
 	    connection.query(queryString, function(err, result) {
 	      if (err) {
 	        throw err;

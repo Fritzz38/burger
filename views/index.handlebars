@@ -1,18 +1,19 @@
 
-<h1>Eat-Da-Burger</h1>
-
-<img src="../assets/img/burger.png" alt="">
+<div class = "text-center">
+	<h1>Eat-Da-Burger</h1>
+	<img src="../assets/img/burger.png" alt="">
+</div>
 
 <div class="container">
 
-<div class="inputBurger">
-    <form method="POST" action="/" class="">
-        <input type="text" name="name" class="">
-        <button type="button" class="btn btn-primary">Submit</button>
-        <br>
-        Enter a burger you want to eat. Click the "Submit" button.
-    </form>
-</div>
+	<div class="text-center">
+	    <form method="POST" action="/" class="">
+	        <input type="text" name="name" class="">
+	        <button type="button" class="btn btn-primary">Submit</button>
+	        <br>
+	        Enter a burger you want to eat. Click the "Submit" button.
+	    </form>
+	</div>
 
 
     <div class="">
@@ -20,7 +21,7 @@
             {{#each burgers}} {{#unless this.devoured}}
             <div class="burgerCell">
                 <li>
-                    <div class="">
+                    <div class="well well-sm">
                         {{this.burger_name}}
                     </div>
                 </li>
@@ -43,11 +44,6 @@
                 <li>
                     {{this.burger_name}}
                 </li>
-                <div class="">
-                    <form action="/{{this.id}}?_method=DELETE" method="POST">
-                        <button type="submit" class="eatBtn">Delete</button>
-                    </form>
-                </div>
             </div>
             {{/if}} {{/each}}
         </ul>

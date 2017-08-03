@@ -26,28 +26,31 @@
 	                        {{this.burger_name}}
 	                    </div>
 	                </li>
-	                    <br>
-	    
-	                    <form action="/{{this.id}}?_method=PUT" method="POST">
+	                
+	                <form action="/{{this.id}}?_method=PUT" method="POST">
 	                        <input type="hidden" name="devoured" value="true">
-	                        <button type="submit" class="eatBtn">Devour It!</button>
-	                    </form>
+	                        <button type="submit" class="pull-right">Devour It!</button>
+	                </form>
 	                
 	            {{/unless}} {{/each}}
 	        </ul>
+
 	    </div>
 	</div>
 
-
-    <div class="">
-        <ul>
-            {{#each burgers}} {{#if this.devoured}}
-            <div class="burgerCell">
-                <li>
-                    {{this.burger_name}}
-                </li>
-            </div>
-            {{/if}} {{/each}}
-        </ul>
+	<br>
+	
+    <div class="row">
+    	<div class="col-md-4">
+	        <ul class ="list-group">
+	            {{#each burgers}} {{#if this.devoured}}
+	            <div class="burgerCell">
+	                <li class="list-group-item">
+	                    {{this.burger_name}}
+	                </li>
+	            </div>
+	            {{/if}} {{/each}}
+	        </ul>
+	    </div>
     </div>
 </div>
